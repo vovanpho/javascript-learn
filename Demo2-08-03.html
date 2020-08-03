@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript-hanle event</title>
+</head>
+<body>
+	<h1>javascript</h1>
+	<header>menu</header>
+	<aside>sub menu</aside>
+	<section>
+		<!-- 1 inster eemet -->
+		<div id="title" style="width: 100px; height: 100px;" onmouseover="alert('dont touch me');">1</div>
+		<div class="aside">3</div>
+		<div name="artribute">3</div>
+		<div name="artribute">4</div>
+	</section>
+	<footer></footer>
+	<div id="table-area"></div>
+	<script>
+		tableDiv = document.getElementById('table-area');
+		
+		html ='<table>';
+		html +='<tr><td>1</td><td>1</td><td>1</td></tr>';
+		html +='<tr><td>2</td><td>2</td><td>2</td></tr>';
+		html +='<tr><td>3</td><td>3</td><td>3</td></tr>';
+		html +='</table>';
+		tableDiv.innerHTML= html;
+		//su ly page hanle event
+		window.onload = function(){
+			// //choice elment, element = tag + artribute
+			// header = document.getElementByTagName('header');
+			// console.log(header[0]);//o day chi co 1 header neu nhieu hon
+
+			// divs =document.getElementsByTagName('div');
+			// // divs =document.getElementsByName('artribute');
+			// // divs =document.getElementByClass('aside');
+			// // divs =document.getElementById('title');
+			// for (var i = 0; i <divs.length; ++i) {
+			// 	console.log(divs[i]);
+			// }
+			
+			// //
+			// // $('#title')
+			// // document.querySelector('#title'); 
+			// // document.querySelectorAll('div')[0];
+			// // document.querySelectorAll('div');
+			// // document.querySelector('.aside');
+			// // alert('page load ...'); // thong bao quang cao gif do
+			// user = confirm('start your page ?'); //xac nhan noi dung gi do
+			// //if (user == true) {}
+			// if (user) {} else {}
+			// console.log(user);
+
+
+			
+			// div=document.querySelector('#title');
+			// //2. add function
+			// div.onmouseout = function(){
+			// 	this.style.background = '#333';
+			// }
+			// //3. listener
+			// div.addEventListener('click', function(){
+			// 	this.style.background ='#888';
+			// })
+
+			setTimeout(function(){
+				console.log('hanle');
+			}, 1000);
+		};
+
+		//settime(function, durication)
+	</script>
+
+	
+</body>
+</html>

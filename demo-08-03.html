@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript</title>
+</head>
+<body>
+	
+	<script>
+		//xem thu them/bo var, let, fustion
+		//bien so nao , dung chung thi bo var
+		n = 20;
+		function todo(){
+			//bien var xet bien rieng trong ham
+			var n = 10;	
+			console.log(n);
+		}
+		console.log(n);
+		todo();
+		//function string
+		 var name = 'ten tui';
+		function showValue(){
+			age = 10;
+			console.log(name);
+		};
+		function getValue(){
+			console.log(name, age);
+		};
+		showValue();
+		getValue();
+		i=10;
+		function testFor(){
+			//var
+			for (var i = 0; i < i.length; i++) {
+				console.log(i);
+			}
+		}
+		//xem phan indexof
+
+		//number, string, boalean, obj
+		console.log('tin nhan');
+		console.log(typeof(10));
+		console.log(typeof('10'));
+		obj={n: '100'};
+		//name variable = value;
+		console.log(typeof(obj));
+		// check type
+		a='gi do'
+		if (typeof(n)=='number') {console.log('is number');}
+		if (typeof(a)!='string') {console.log('is string');}
+		if (! typeof(a)=='string') {console.log('is string');}
+		// array is oject
+		arr = []; // cach 1
+		console.log(arr);
+		arr[0] = 1;
+		arr[1] = 'string';
+		arr[2] = true;
+		arr1 = new Array(10, 'ten', 10);
+
+		arr2 = new Array(); // cach 2
+		arr2[0]=2;
+		arr2[2]=true;
+		arr3 = arr1.concat(arr2);
+		console.log(arr3);
+		arr4 = arr2 + arr1;//chuoi
+		console.log(arr4);
+		arr1[0];//khong loi
+		arr1['0']; //khong loi
+		//sorted
+		nums = [1,3,6,4,5];
+		sorted = nums.sort();
+		console.log(sorted);
+		//propetive is pair {key: value}
+		//object
+		nus = {
+			'name':'tan',
+			'age':19,
+			'todo': function(){
+				console.log('is methond');
+			} 
+		};
+		console.log(nus);
+	//	nus.['todo']();
+	//	nus.todo;
+	</script>
+</body>
+</html>
