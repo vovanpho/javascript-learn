@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <div id="box" style="width: 200px; height: 200px; "></div> -->
+	<div id="context" style="position: absolute;display: none; top: 100px; left: 100px;">
+		<a href="">ssss</a>
+		<a href="">scsc</a>
+		<a href="">cccc</a>
+		<a href="">hyyy</a>
+	</div>
+	
+</body>
+<script>
+	
+
+
+	window.onload=function(){
+		pop =document.querySelector('#context');
+		//event
+		document.oncontextmenu=contextShow;
+		document.onclick =contextHide;
+	}
+
+
+
+	function contextShow() {
+		pop.style.top = event.clientY + document.body.scrollTop +'px';
+		pop.style.left = event.clientX + document.body.scrollLeft +'px';
+		
+		pop.style.display ='block';
+		// body...
+		return false;
+	}
+	function contextHide(){
+		pop.style.display= 'none';
+	}
+
+
+
+	// window.onload =function() {
+	// 	// body...
+	// 	document.captureEvents(Event.MOUSEDOWN);
+	// 	document.onmousedown = mouseEvent;
+	// }
+	// function mouseEvent(e){
+	// 	console.log(e.which);
+	// 	if (e.which ==1) {
+	// 		console.log('left');
+	// 	}
+	// 	if (e.which ==2) {
+	// 		console.log('wheel');
+	// 	}
+	// 	if (e.which ==3) {
+	// 		console.log('right');
+	// 		return false;
+	// 	}
+	// };
+
+
+
+	// };
+	// window.onload = function(){
+	// 	document.captureEvents(Event.MOUSEDOWN);
+	// 	document.onmousedown = clickEvent;
+
+	// };
+
+	// function mouseEvent(){
+	// 	console.log(event.button);
+	// 	if ((event.button ==2) || (event.button ==3)) {
+	// 		alert("ddddd");
+	// 	}
+	
+
+
+
+
+
+
+
+
+
+
+
+		// window.onload = function(){
+		// 	box1=document.querySelector('#box');
+		// 	//box.style.backgroundColor = '#f00';
+		// 	box1.style.backgroundColor= toHexColor(0,255,0);
+		// 	// body...
+		// 	setTimeout(fadeColor(box, 0, 100, 0, 255, 255, 255, 100, 0),200);
+		// };
+
+		// function fadeColor(el,sr,sg,sb,er,eg,eb,step,i){
+		// 	var red = Math.floor(sr*((step-i)/step) + er*(i/step));
+		// 	var green = Math.floor(sg*((step-i)/step) + eg*(i/step));
+		// 	var blue = Math.floor(sb*((step-i)/step) + eb*(i/step));
+		// 	++i;
+		// 	return function(){
+		// 		el.style.backgroundColor = toHexColor(red, green, blue);
+		// 		if (i>=step) {
+		// 			clearTimeout(timer);
+		// 		}else{
+		// 			timer =setTimeout(fadeColor(el, sr, sg, sb, er, eg, eb, step, i),200);
+
+		// 		}
+		// 	};
+		// };
+
+
+
+		// function toHexColor(red, green, blue){
+		// 	return '#'+toHex(red) + toHex(green) + toHex(blue);
+		// };
+		// function toHex(cv){
+		// 	var hexChar='0123456789ABCDEF';
+		// 	if (cv<0) {
+		// 		return '00';
+		// 	}
+		// 	if (cv>255) {
+		// 		return 'FF'
+		// 	}
+		// 	var first = Math.floor(cv/16);//hight
+		// 	var second = cv%16;//low
+		// 	result= hexChar.charAt(first) + hexChar.charAt(second);
+		// 	return result;
+		// };
+</script>
+</html>
